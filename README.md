@@ -1,2 +1,2 @@
 # octo-gallery
-Gallery plugin for October Cms
+Gallery plugin for OctoberCMS
