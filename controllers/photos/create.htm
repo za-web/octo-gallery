@@ -1,0 +1,60 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('zaweb/gallery/photos') ?>">Photos</a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+    <?= Form::open(['class'=>'layout']) ?>
+
+        <div class="layout-row">
+            <?= $this->formRender() ?>
+        </div>
+
+        <div class="form-buttons">
+             <div id="drop">
+                            <a id='selectFiles' onclick="upload('/admin/zaweb/gallery/photos/upload')">Select files</a>
+                            <input id="upload"  type="file" name="upl" multiple />
+                    </div>
+ 
+                    <ul id='files'>
+                       <script id="entry-template" type="text/x-handlebars-template">
+                          <li>
+                            <img src="{{ path }}" class="preview">
+                          </li>
+                      </script>
+                </ul>
+            <div class="loading-indicator-container">
+                <button
+                    type="submit"
+                    data-request="onSave"
+                    data-hotkey="ctrl+s, cmd+s"
+                    data-load-indicator="Creating Photo..."
+                    class="btn btn-primary">
+                    Create
+                </button>
+                <button
+                    type="button"
+                    data-request="onSave"
+                    data-request-data="close:1"
+                    data-hotkey="ctrl+enter, cmd+enter"
+                    data-load-indicator="Creating Photo..."
+                    class="btn btn-default">
+                    Create and Close
+                </button>
+                <span class="btn-text">
+                    or <a href="<?= Backend::url('zaweb/gallery/photos') ?>">Cancel</a>
+                </span>
+            </div>
+        </div>
+
+    <?= Form::close() ?>
+
+<?php else: ?>
+
+    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+    <p><a href="<?= Backend::url('zaweb/gallery/photos') ?>" class="btn btn-default">Return to photos list</a></p>
+
+<?php endif ?>

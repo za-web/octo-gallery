@@ -1,0 +1,22 @@
+<div data-control="toolbar">
+    <a href="<?= Backend::url('zaweb/gallery/photos/create') ?>" class="btn btn-primary oc-icon-plus">New Photo</a>
+    <button
+            id = "remove_photos"
+            class="btn btn-primary oc-icon-trash-o"
+            data-request="onDelete"
+            data-trigger-type="enable"
+            data-trigger = ".list-checkbox input[type='checkbox']"
+            data-trigger-condition="checked"
+            data-request-success="$el.attr('disabled', 'disabled');"
+            disabled
+            >
+    Remove Photo(s)</button>
+</div>
+
+<script>
+    $("#remove_photos").click(function(){
+        $(this).data('request-data', {
+            photos: $('.list-checkbox input[type=\'checkbox\']').listWidget('getChecked')
+        })
+    });
+</script>

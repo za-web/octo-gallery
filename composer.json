@@ -1,0 +1,25 @@
+{
+  "name": "za-web/octo-gallery",
+  "description": "Gallery plugin for OctoberCMS",
+  "homepage": "http://octobercms.com",
+  "keywords": [
+    "october",
+    "cms",
+    "za-web",
+    "gallery",
+    "plugin"
+  ],
+  "authors": [
+    {
+      "name": "Aleksandr Zamiatin",
+      "email": "cawa123@mail.ru"
+    },
+    {
+      "name": "Ivan",
+      "email": "iillexial@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  }
+}

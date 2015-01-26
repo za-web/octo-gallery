@@ -1,0 +1,21 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+    image:
+        label: Image
+        sortable: no
+    description:
+        label: Photo description
+    category:
+        label: Category
+        relation: category
+        select: title
+    created_at:
+        label: CREATED AT
+        type: date
+
+        

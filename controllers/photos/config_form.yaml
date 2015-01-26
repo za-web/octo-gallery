@@ -1,0 +1,35 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Photo
+
+# Model Form Field configuration
+form: $/zaweb/gallery/models/photos/fields.yaml
+
+# Model Class name
+modelClass: Zaweb\Gallery\Models\Photos
+
+# Default redirect location
+defaultRedirect: zaweb/gallery/photos
+
+# Create page
+create:
+    title: Create Photo
+    redirect: zaweb/gallery/photos
+    redirectClose: zaweb/gallery/photos
+
+# Update page
+update:
+    title: Edit Photo
+    redirect: zaweb/gallery/photos
+    redirectClose: zaweb/gallery/photos
+
+delete:
+    title: Delete photo
+    redirect: zaweb/gallery/photos
+    redirectClose: zaweb/gallery/photos
+# Preview page
+preview:
+    title: Preview Photo

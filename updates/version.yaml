@@ -1,0 +1,12 @@
+1.0.1: First version of Sitemap
+1.0.2:
+    - Create categories table
+    - create_categories_table.php
+1.0.3:
+    - Create attachment table
+    - create_attachments_table.php
+1.0.4:
+    - Create photos table
+    - create_photos_table.php
+
+

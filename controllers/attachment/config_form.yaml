@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Attachment
+
+# Model Form Field configuration
+form: $/zaweb/gallery/models/attachment/fields.yaml
+
+# Model Class name
+modelClass: Zaweb\Gallery\Models\Attachment
+
+# Default redirect location
+defaultRedirect: zaweb/gallery/attachment
+
+# Create page
+create:
+    title: Create Attachment
+    redirect: zaweb/gallery/attachment/update/:id
+    redirectClose: zaweb/gallery/attachment
+
+# Update page
+update:
+    title: Edit Attachment
+    redirect: zaweb/gallery/attachment
+    redirectClose: zaweb/gallery/attachment
+
+# Preview page
+preview:
+    title: Preview Attachment

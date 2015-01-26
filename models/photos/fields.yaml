@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    description:
+        label: "Photo description"
+    category_id:
+        label: "Category"
+        type: dropdown    
+    attachment_id:
+        label: "Attachment"
+        type: number

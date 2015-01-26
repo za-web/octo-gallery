@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/zaweb/gallery/models/categories/fields.yaml
+
+# Model Class name
+modelClass: Zaweb\Gallery\Models\Categories
+
+# Default redirect location
+defaultRedirect: zaweb/gallery/categories
+
+# Create page
+create:
+    title: Create Category
+    redirect: zaweb/gallery/categories/update/:id
+    redirectClose: zaweb/gallery/categories
+
+# Update page
+update:
+    title: Edit Category
+    redirect: zaweb/gallery/categories
+    redirectClose: zaweb/gallery/categories
+
+# Preview page
+preview:
+    title: Preview Category
